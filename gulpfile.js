@@ -20,7 +20,7 @@ var paths = {
 
 
 gulp.task('default', ['sass', 'templatecache', 'useref', 'moveImages',
-  'moveFonts'
+  'moveFonts', 'moveCommon'
 ]);
 
 gulp.task('sass', function(done) {
