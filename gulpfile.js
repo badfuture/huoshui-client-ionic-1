@@ -68,7 +68,7 @@ gulp.task('useref', ['sass', 'templatecache'], function(done) {
     .on('end', done);
 });
 
-//move imgs to dist
+//move imgs dir to dist
 gulp.task('moveImages', function(done) {
   gulp.src('./www/img/*')
     .pipe(gulp.dest('./www/dist/img'));
@@ -77,10 +77,17 @@ gulp.task('moveImages', function(done) {
     .on('end', done);
 });
 
-//move imgs to dist
+//move fonts dir to dist
 gulp.task('moveFonts', function(done) {
   gulp.src('./www/fonts/**/*')
     .pipe(gulp.dest('./www/dist/fonts'))
+    .on('end', done);
+});
+
+//move common dir to dist
+gulp.task('moveCommon', function(done) {
+  gulp.src('./www/common/**/*')
+    .pipe(gulp.dest('./www/dist/common'))
     .on('end', done);
 });
 
