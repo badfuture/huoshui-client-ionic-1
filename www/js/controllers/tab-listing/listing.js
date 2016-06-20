@@ -463,13 +463,13 @@ angular.module('listing.controllers', [])
 
         var homeworkOverall = Math.round(res.homework.overall);
         if (homeworkOverall == 4) {
-          $scope.reviewStats.homeworkOverall = "没有";
-        } else if (homeworkOverall == 3) {
-          $scope.reviewStats.homeworkOverall = "较少";
-        } else if (homeworkOverall == 2) {
-          $scope.reviewStats.homeworkOverall = "较多";
-        } else if (homeworkOverall == 1) {
           $scope.reviewStats.homeworkOverall = "堆成山";
+        } else if (homeworkOverall == 3) {
+          $scope.reviewStats.homeworkOverall = "较多";
+        } else if (homeworkOverall == 2) {
+          $scope.reviewStats.homeworkOverall = "较少";
+        } else if (homeworkOverall == 1) {
+          $scope.reviewStats.homeworkOverall = "没有";
         }
 
         var examOverall = Math.round(res.exam.overall);
